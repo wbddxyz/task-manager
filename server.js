@@ -32,10 +32,6 @@ async function initialiseDatabase() {
     console.log('Task Manager database table ready');
 }
 
-app.get('/', (req, res) => {
-    res.send('Task Manager API');
-});
-
 app.post('/tasks', async (req, res) => {
     try {
         const { title, description } = req.body;
